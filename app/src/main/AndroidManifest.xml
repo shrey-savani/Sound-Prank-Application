@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.soundprank">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SoundPrank"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmergencySoundNextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmergencySoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OtherSoundNextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OtherSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MachineSoundNextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnimalSoundNextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HumanSoundNextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MachineSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnimalSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HumanSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrankSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>

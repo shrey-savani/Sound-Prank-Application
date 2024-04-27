@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TemplateView">
+        <attr name="gnt_template_type" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ScratchView">
+        <!-- 擦除的宽度-->
+        <attr name="penStrokeWidth" format="integer"/>
+        <!-- 蒙板图片 -->
+        <attr name="coverBitmap" format="reference"/>
+        <!-- 蒙板图片的scaleType -->
+        <attr name="coverBitmapFitStyle" >
+            <enum name="fitXY" value="0" />
+            <enum name="centerCrop" value="1"/>
+        </attr>
+        <!-- 当没有蒙板图片时,蒙板使用的颜色值 -->
+        <attr name="coverColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="Wheel">
+        <attr name="wheel_colors" format="reference"/>
+        <attr name="wheel_stroke_color" format="color"/>
+        <attr name="wheel_stroke_width" format="dimension"/>
+        <attr name="wheel_items" format="reference"/>
+        <attr name="wheel_text_size" format="dimension"/>
+        <attr name="wheel_text_color" format="color"/>
+        <attr name="wheel_arrow_color" format="color"/>
+        <attr name="wheel_arrow_width" format="dimension"/>
+        <attr name="wheel_arrow_height" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShimmerLayout">
+        <attr name="shimmer_color" format="color|reference"/>
+        <attr name="shimmer_animation_duration" format="integer|reference"/>
+        <attr name="shimmer_auto_start" format="boolean|reference"/>
+        <attr name="shimmer_angle" format="integer|reference"/>
+        <attr name="shimmer_mask_width" format="float|reference"/>
+        <attr name="shimmer_gradient_center_color_width" format="float|reference"/>
+        <attr name="shimmer_reverse_animation" format="boolean|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyTextView">
+        <attr name="font" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LuckyWheelView">
+        <attr name="lkwBackgroundColor" format="color" />
+        <attr name="lkwCursor" format="reference" />
+        <attr name="lkwCenterImage" format="reference" />
+        <attr name="lkwEdgeColor" format="color" />
+        <attr name="lkwEdgeWidth" format="integer" />
+        <attr name="lkwTopTextColor" format="color" />
+        <attr name="lkwTopTextPadding" format="dimension" />
+        <attr name="lkwTopTextSize" format="dimension" />
+        <attr name="lkwSecondaryTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

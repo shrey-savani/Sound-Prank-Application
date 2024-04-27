@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_back"
+    tools:context=".SettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/txthumanheading"
+            app:layout_constraintEnd_toStartOf="@+id/txthumanheading"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="@id/txthumanheading" />
+
+        <TextView
+            android:id="@+id/txthumanheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="Setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintTop_toTopOf="@id/header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+    android:id="@+id/imgprivacy"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:adjustViewBounds="true"
+    android:src="@drawable/privacy"
+        app:layout_constraintBottom_toTopOf="@id/imgrate"
+    app:layout_constraintEnd_toStartOf="@id/txtprivacy"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <TextView
+        android:id="@+id/txtprivacy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/theme"
+        app:layout_constraintBottom_toBottomOf="@id/imgprivacy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgprivacy"
+        app:layout_constraintTop_toTopOf="@id/imgprivacy" />
+
+    <ImageView
+        android:id="@+id/imgrate"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rate"
+        app:layout_constraintBottom_toTopOf="@id/imgshare"
+        app:layout_constraintEnd_toStartOf="@id/txtrate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgprivacy" />
+
+    <TextView
+        android:id="@+id/txtrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rate Us"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/theme"
+        app:layout_constraintBottom_toBottomOf="@id/imgrate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgrate"
+        app:layout_constraintTop_toTopOf="@id/imgrate" />
+
+    <ImageView
+        android:id="@+id/imgshare"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/share"
+        app:layout_constraintEnd_toStartOf="@id/txtshare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgrate" />
+
+    <TextView
+        android:id="@+id/txtshare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Share App"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/theme"
+        app:layout_constraintBottom_toBottomOf="@id/imgshare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgshare"
+        app:layout_constraintTop_toTopOf="@id/imgshare" />
+
+    <FrameLayout
+        android:id="@+id/bannerad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333232"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

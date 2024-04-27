@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_back"
+    tools:context=".EmergencySoundActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/txtheading"
+            app:layout_constraintEnd_toStartOf="@+id/txtheading"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="@id/txtheading" />
+
+        <TextView
+            android:id="@+id/txtheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="Emergency Sound"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintTop_toTopOf="@id/header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgpolicesiren"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/policesiren"
+                app:layout_constraintEnd_toStartOf="@id/imgpollicechatting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/imgpollicechatting"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgpollicechatting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/policechatting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgpolicesiren"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/imgpolicesiren"/>
+
+            <ImageView
+                android:id="@+id/imgfirealarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/firealarm"
+                app:layout_constraintBottom_toBottomOf="@id/imgambulance"
+                app:layout_constraintEnd_toStartOf="@id/imgambulance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgpolicesiren" />
+
+            <ImageView
+                android:id="@+id/imgambulance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ambulance"
+                app:layout_constraintBottom_toBottomOf="@id/imgfirealarm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgfirealarm"
+                app:layout_constraintTop_toBottomOf="@id/imgpollicechatting" />
+
+            <FrameLayout
+                android:id="@+id/nativead"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgfirealarm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
